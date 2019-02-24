@@ -1,0 +1,304 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Infotech - Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--		<meta http-equiv="refresh" content="5" >-->
+		<link rel="stylesheet" href="css/styles.min.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#hamburger-menu-btn').click(function(){
+					$('aside').toggleClass('active')
+				})
+				$('#exit-side-menu-btn').click(function(){
+					$('aside').toggleClass('active')
+				})
+				$('#topbar-hamburger-menu').click(function(){
+					$('aside').toggleClass('active');
+					if($('aside').hasClass('active')){
+						$('#topbar-hamburger-menu').addClass('open');
+					}
+					else{
+						$('#topbar-hamburger-menu').removeClass('open');
+					}
+				})
+			})
+		</script>
+		
+
+	</head>
+
+	<body>
+
+		<!-- test -->
+
+
+        <div id="container">
+            
+            <header>
+                <nav id="first-topbar">
+                    <ul class="mobile-nav">
+                    	
+                    	<li id="topbar-logo"><a href="index.html"><img src="img/Hoved-logo.svg" alt="infotech logo"></a></li>
+                    	
+                    	<li id="home"><a href="index.html">Hjem</a></li>
+						<li id="seperator-1" class="topbar-seperators"></li>
+                    	<li id="about-us"><a href="om-oss.html">Om Oss</a></li>
+						<li id="seperator-2" class="topbar-seperators"></li>
+                    	<li id="our-products"><a href="vaart-team.html">Våre Produkter</a></li>
+                    	
+                    	
+                    	<li id="topbar-support"><a href="support.html"><img src="img/Support-icon-gray.svg" alt="support"></a></li>
+                    	<li id="topbar-hamburger-menu" class=""><a href="#first-topbar"><img src="img/Hamburger-menu-icon-dblue.svg" alt="hamburger menu"></a></li>
+                    </ul>
+                </nav>
+                <nav id="second-topbar">
+					<ul class="mobile-nav">
+						<li id="logo"><a href="index.html"><img src="img/Hoved-logo.svg" alt="Infotech logo"></a></li>
+						<li id="support-icon"><a href="support.html"><img src="img/Support-icon.svg" alt=""></a></li>
+						<li id="hamburger-menu-btn"><a href="#first-topbar"><img src="img/Hamburger-menu-icon.svg" alt="hamburger-menu"></a></li>
+					</ul>
+                </nav>
+            </header>
+            
+            <aside id="extra-nav extra-nav_hide" class="">
+            	<nav id="sidebar-container">
+            			<img id="exit-side-menu-btn" src="img/exit-side-menu.svg" alt="lukk side menyen">
+            		<div id="our-products-title" class="side-menu-title">Våre Produkter</div>
+            		<ul id="our-products-list" class="side-menu-items">
+            			<li><a href="it-base.html">IT Base</a></li>
+            			<li><a href="bygge-kort-leser.html">Byggekortleser</a></li>
+            			<li><a href="konsult-tjenester.html">Konsult Tjenester</a></li>
+            		</ul>
+            		<div id="about-us-title" class="side-menu-title">Om Oss</div>
+            		<ul id="about-us-list" class="side-menu-items">
+            			<li><a href="vaart-team.html">Vårt team</a></li>
+            			<li><a href="kontakt-oss.html">Kontakt Oss</a></li>
+            			<li><a href="sammarbeids-bedrifter.html">Sammarbeids bedrifter</a></li>
+            		</ul>
+            	</nav>
+            </aside>
+            <section id="section-container">
+               
+                <section id="our-products-container">
+                
+                
+                	<div id="topbar-shadow">			</div>
+                	
+             	
+                	<div class="slideshow-container">
+						<div class="mySlides fade">
+						  <h1 class="product-header-text">Byggekortleser</h1>
+						  <img src="img/byggekort-demonstrasjon.png" id="byggekort-img">
+						</div>
+
+						<div class="mySlides fade">
+						  <h1 class="product-header-text">IT Base</h1>
+						  <img src="img/it-base.png">
+						</div>
+
+						<div class="mySlides fade">
+						  <h1 class="product-header-text">Konsult Tjenester</h1>
+						  <img src="img/konsulting.png">
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					</div>
+						<br>
+					<div id="product-info-area">
+						<p class="info-text fade">Få full mannskapskontroll på byggeplassen... <a href="bygge-kort-leser.html" class="read-more-link">les mer</a></p>
+						<p class="info-text fade">Samler alle dokumenter til ditt byggeprosjekt på web... <a href="it-base.html" class="read-more-link">les mer</a></p>
+						<p class="info-text fade">Vi hjelpe deg å spare tid og øke sikkerheten på byggeplassen... <a href="konsult-tjenester.html" class="read-more-link">les mer</a></p>
+						<div id="dot-container">
+						  <span class="dot" onclick="currentSlide(1)"></span> 
+						  <span class="dot" onclick="currentSlide(2)"></span> 
+						  <span class="dot" onclick="currentSlide(3)"></span> 
+						</div>
+					</div>
+                	
+                </section>
+                
+                <section id="about-us">
+                    <h1>Om Oss</h1>
+                    <img src="img/our-team.png" alt="bilde av alle i oss hos infotech" id="about-us-img">
+                	<div id="about-us-info-container">
+                		<p id="about-us-info-text">
+                			Infotech AS ble etablert i 1993. Vi har lang erfaring og er en samarbeidspartner som løser de fleste utfordringer innen utvikling av skreddersydde IT-løsninger
+                			 ...
+                			<a href="om-oss.html" class="read-more-link">les mer</a>
+                		</p>
+                		<img src="img/dot-net-logo.svg" alt="" id="dot-net-logo">
+                	</div>
+                </section>
+                
+                
+                <section id="contact-us">
+                	<h1 id="contact-us-header">Ta Kontakt</h1>
+<!--                	<img src="img/skyline.png" alt="byggeplass siluet" id="skyline-img">-->
+                	<form id="form-container" role="contact" method="post">
+						<div class="form-group">
+							<label class="for-screen-readers-only">		Navn</label>
+							<input type="yourname" class="form-control" name="name" id="" placeholder="Navn">
+						</div>
+						<div class="form-group">
+							<label class="for-screen-readers-only">		Email</label>
+							<input type="email" class="form-control" name="email" id="" placeholder="Email">
+						</div>
+							<div class="form-group">
+							<label class="for-screen-readers-only">		Melding</label>
+							<textarea class="form-control" name="msg" rows="2" placeholder="Melding"></textarea>
+						</div>
+
+						<div class="form-group" id="btn-container">
+							<button type="submit" name="contact_submit" class="default-btn">Send</button>
+						</div>
+        			</form>
+                </section>
+                
+            </section>
+<!--            END OF SECTION-CONTANTER-->
+            
+            <footer>
+              
+               <div class="footer-col-container">
+				   <div class="footer-columns" id="one">
+						<h3>Våre Produkter</h3>
+						<div id="uline-vaare-produkter" class="uline"></div>
+						<ul>
+							<li>
+								<a href="it-base.html">
+									IT Base
+								</a>
+							</li>
+							<li>
+								<a href="bygge-kort-leser.html">	
+									Byggekortleser
+								</a>
+							</li>
+							<li>
+								<a href="konsult-tjenester.html">
+									Konsult Tjeneer
+								</a>
+							</li>
+						</ul>
+				   </div>
+					<div class="footer-columns" id="two">
+						<h3>Om Oss</h3>
+						<div id="uline-om-oss" class="uline"></div>
+						<ul>
+							<li>
+								<a href="vaart-team.html">
+									Vårt team
+								</a>
+							</li>
+							<li>
+								<a href="kontakt-oss.html">
+									Kontakt Oss
+								</a>
+							</li>
+							<li>
+								<a href="sammarbeids-bedrifter.html">
+									Sammarbeids- <br>
+									bedrifter
+								</a>
+							</li>
+						</ul>
+					</div>	
+					<div class="footer-columns" id="three">
+						<a href="support.html">
+						   <img src="img/Support-icon-w.svg" alt="ikonet for support">
+						</a>
+					</div>
+				</div>
+            </footer>
+            
+        </div>
+        
+        
+<!--        THE CODE FOR THE CAROUSEL-->
+        <script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  	showSlides(slideIndex += n);
+				restartSlideTimer();
+			}
+
+			function currentSlide(n) {
+			  	showSlides(slideIndex = n);
+				restartSlideTimer();
+			}
+
+			function showSlides(n) 
+			{
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				var infoTexts = document.getElementsByClassName("info-text");
+				
+				
+				if (n > slides.length) {
+					slideIndex = 1
+				}
+				
+				if (n < 1) {
+					slideIndex = slides.length
+				}
+				
+				for (i = 0; i < infoTexts.length; i++) {
+					infoTexts[i].style.display = "none";  
+				}
+				
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				
+				slides[slideIndex -1].style.display = "block";  
+				dots[slideIndex -1].className += " active";
+				infoTexts[slideIndex -1].style.display = "block";
+			}
+			
+			var dont_change_slide = true;
+			var timer
+			
+			//start_timer
+			function SlideTimer(){
+				timer = setTimeout(SlideTimer, 5000);
+				if(dont_change_slide){
+					dont_change_slide = false; 
+					return
+				}
+				plusSlides(1);
+			}
+			function restartSlideTimer(){
+//				console.log("restarting sliderTimer")
+				clearTimeout(timer);
+				dont_change_slide = true;
+				SlideTimer();
+			}
+			
+			SlideTimer();
+			
+			window.onkeyup = function(e){
+//				console.log(e.key);
+				if(e.key === "e"){
+					restartSlideTimer();
+				}
+			}
+			
+			
+			
+		</script>
+        
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="60"
+   height="60"
+   viewBox="0 0 15.875 15.875"
+   version="1.1"
+   id="svg9024"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="Hamburger-menu-icon-dblue.svg">
+  <defs
+     id="defs9018" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="44.605532"
+     inkscape:cy="51.712981"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1600"
+     inkscape:window-height="961"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata9021">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.12498)">
+    <g
+       style="display:inline;fill:#2276b2;fill-opacity:1"
+       transform="matrix(3.3836615,0,0,3.3836615,-1438.8672,-324.9773)"
+       id="g37260-5-8">
+      <rect
+         ry="0.3460432"
+         y="179.71684"
+         x="425.30164"
+         height="0.6920864"
+         width="4.5678177"
+         id="rect37253-0-6"
+         style="opacity:1;fill:#2276b2;fill-opacity:1;stroke:none;stroke-width:0.06789682;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+      <rect
+         style="opacity:1;fill:#2276b2;fill-opacity:1;stroke:none;stroke-width:0.06789682;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect37255-5-4"
+         width="4.5678177"
+         height="0.6920864"
+         x="425.30164"
+         y="182.53505"
+         ry="0.3460432" />
+      <rect
+         style="opacity:1;fill:#2276b2;fill-opacity:1;stroke:none;stroke-width:0.06789682;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect37251-7-6"
+         width="4.5678177"
+         height="0.6920864"
+         x="425.30164"
+         y="181.12595"
+         ry="0.3460432" />
+    </g>
+  </g>
+</svg>

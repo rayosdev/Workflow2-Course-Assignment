@@ -1,0 +1,21 @@
+{
+  "name": "infotech-workflow",
+  "version": "1.0.0",
+  "description": "infotech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^2.1.0"
+  }
+}

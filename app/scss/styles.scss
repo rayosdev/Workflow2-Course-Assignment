@@ -1,0 +1,899 @@
+$deepBlue: #2276b2;
+$lightBlue: #61ace1;
+$lightOrange: #dd9f6f;
+$darkOrange: #a75f27;
+$darkGray: #666666;
+$lighterGray: #e6e6e6;
+$middleGray: #999999;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+
+body {
+	
+	
+	background: $darkGray;
+	padding: 0;
+	margin: 0 auto;
+	border: 0;
+	// border: solid blue 14px;
+	
+	#container{
+//		width: 100%;
+		margin: 0 auto;
+		max-width: 960px;
+		
+		display: grid;
+		grid-template-columns: 1fr;
+		
+		header  			{grid-area: head}
+		aside 				{grid-area: side}
+		#section-container 	{grid-area: cont}
+		footer 				{grid-area: foot}
+		
+		grid-template-areas: 
+			" head "
+			" cont "
+			" foot ";
+		
+		> *{
+		    font-family: sans-serif;
+			
+			margin: 0 auto;
+			border: 0;
+			padding: 0;
+		}
+		
+		.for-screen-readers-only {
+			
+			position: fixed;
+			text-indent: -10000px;
+		}
+		
+	}
+	
+}
+//END OF BODY
+
+
+	h1 {
+		font-family: Arial;
+		font-weight: bolder;
+		font-size: 35px;
+		text-align: center;
+	}
+	
+	.read-more-link{
+		letter-spacing: normal;
+		font-weight: bold;
+		font-style: italic;
+		border-bottom: 2.5px solid white;
+		padding-bottom: 4px;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	
+	#{$a-tags} {
+		color: white;
+		text-decoration: none;
+	}
+	#{$a-tags-hover} {
+		color: #dddddd;
+
+	}
+
+	.default-btn{
+		box-shadow: none;
+		border: none;
+		margin: 0;
+		padding: 0;
+		
+		min-height: 30px;
+		min-width: 40%;
+		background: $lightOrange;
+		border: 1px solid $darkGray;
+		box-shadow: inset 0 0 0 1px $middleGray;
+		color: white;
+		font-size: 18px;
+		padding: 5px;
+		font-family: Arial;
+		font-weight: bold;
+		
+	}
+
+	.default-btn:hover {
+		background: $lighterGray;
+		color: black;
+	}
+
+//END OF COMMON CSS
+
+
+
+
+
+
+
+header {
+
+	
+	#first-topbar .mobile-nav {
+		
+		background: $deepBlue;
+		margin: 0;
+		padding: 15px 20px 15px 20px;
+		
+		
+		color: white;
+		font-size: 100%;
+		font-family: sans-serif;
+		font-weight: bold;
+		list-style: none;
+		text-align: center;		
+		
+		
+		display: grid;
+		grid-template-columns: 1fr 0.1fr 1fr 0.1fr 2fr;
+		grid-template-rows: 1fr!important;
+		max-width: 960px;
+//		grid-gap: 10px;
+		
+		
+		
+		#home  			{grid-area: home}
+		#seperator-1 	{grid-area: sep1}
+		#about-us	 	{grid-area: abut}
+		#seperator-1  	{grid-area: sep2}
+		#our-products  	{grid-area: ourp}
+		
+		#topbar-logo 			{grid-area: logo}
+		#topbar-support 		{grid-area: tsup}
+		#topbar-hamburger-menu 	{grid-area: thmb}
+		
+		#topbar-logo 			{display: none;}
+		#topbar-support 		{display: none;}
+		#topbar-hamburger-menu 	{display: none;}
+		
+		grid-template-areas: 
+			"home sep1 abut sep2 ourp";
+		
+		a{
+			display: block;
+			width: 100%;
+			white-space: nowrap;
+			padding: 0 3px;
+		}
+	}
+	
+	
+	#second-topbar .mobile-nav {
+		
+		background: white;
+		margin: auto 0;
+		padding: 3px;
+		position: relative; 
+		
+		list-style: none;
+		text-align: center;
+		
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 960px;
+//		grid-gap: 10px;
+		
+		#logo  				{grid-area: logo}
+		#support-icon		{grid-area: supo}
+		#hamburger-menu-btn	{grid-area: hamb}
+		
+		grid-template-areas: 
+			"logo supo supo hamb";
+		
+		
+		* {
+			width: 100%;
+            margin: 0 auto;
+            align-items: stretch;
+		}
+		
+		#logo {
+			width: 65%;
+		}
+		
+        
+        #support-icon {
+			width: 70%;
+            align-self: center;
+        }
+        
+        #hamburger-menu-btn {
+            width: 40%;
+            align-self: center;
+        }
+        
+	}
+	
+	.topbar-seperators {
+		background: white;
+		border-radius: 20px;
+		padding: 0;
+		width: 2px;
+		margin: 0 auto;
+	}
+}
+//END OF HEADER
+
+
+
+
+// FOR MENU ANIMATION ON ACTIVE
+aside.active {
+	right: 0px !important;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+aside {
+	z-index: 10;
+    position: fixed;
+    height: 100%;
+	top: 0px;
+	right: -85% !important;
+	width: 85%;
+    background: $deepBlue;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0);
+	transition: 0.3s;
+		
+	
+	#sidebar-container {
+		margin: 5%;
+		font-family: sans-serif;
+		
+		
+		#exit-side-menu-btn {
+			position: relative;
+			margin: 20px;
+			width: 40px;
+			float: right;
+		}
+		
+		#our-products-title {
+			clear: both;
+		}
+		
+		.side-menu-title {
+			color: white;
+			font-weight: bold;
+			font-size: 25px;
+			text-align: center;
+		}
+		
+		.side-menu-items {
+			font-size: 18px;
+			list-style: none;
+			padding: 0;
+			
+			li{
+				padding: 5px;
+				border: 2px solid white;
+				background: white;
+				color: $deepBlue;
+				border-radius: 5px;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			
+			a {
+				display: block;
+				width: 100%;
+			}
+			
+			#{$a-tags} {
+				color: $deepBlue;
+				text-decoration: none;
+			}
+			#{$a-tags-hover} {
+				color: $lightBlue;
+
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+#section-container {
+	
+//	min-height: 750px;
+	height: auto;
+	grid-gap: 0;
+
+	
+	#our-products-container {
+		background: $lightOrange;
+		
+		* {
+//			box-sizing:border-box
+		}
+		
+		
+		#topbar-shadow {
+			
+//			border: 1px solid black;
+			border: 2px solid rgba(0, 0, 0, 0.3);
+			height: 0px;
+			content: "";
+			box-shadow: 0px 6px 25px black;
+		}
+		
+
+		.mySlides {
+			display:none;
+		}
+
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+			min-height: 200px;
+			
+			img {
+				width: 100%;
+				
+			}
+			
+			#byggekort-img {
+//				padding-top: 22.83px;
+//				padding-bottom: 22px;
+			}
+			
+			
+			h1{
+				width: 100%;
+			}
+		}
+
+		.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: -22px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+		}
+
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+
+		.product-header-text {
+			color: white;
+			
+			margin: 0;
+//			padding: 0px 12px; 
+			padding-top: 55px;
+			padding-bottom: 25px;
+			width: 100%;
+		}
+
+
+		#product-info-area{
+			padding: 10px;
+			background: $lightBlue;
+			min-height: 130px;
+
+			text-align: center;
+
+			color: white;
+			
+			p{	
+				font-family: Arial;
+				font-size: 20px;
+				height: 70px;
+				letter-spacing: 1.9px;
+			}
+		}
+		
+		#dot-container {
+			padding-bottom: 10px;
+		}
+		
+		.dot {
+			margin: 0 6px;
+			cursor: pointer;
+
+			height: 12px;
+			width: 12px;
+			background-color: rgba(0, 0, 0, 0);
+			border-radius: 50%;
+			display: inline-block;
+			border: 2px solid white;
+		}
+
+		.active, .dot:hover {
+			background-color: white;
+		}
+
+		.fade {
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@keyframes fade {
+			from {opacity: .4} 
+			to {opacity: 1}
+		}
+
+		@media only screen and (max-width: 300px) {
+			.prev, .next,.text {font-size: 11px}
+		}
+
+
+	}
+	
+	
+	
+
+//	END OF PRODUCT-CONTAINER
+	
+
+	
+	
+	#about-us {
+		background: white;
+		
+		h1{
+			margin: 0;
+			padding-top: 30%;
+			padding-bottom: 15px;
+		}
+		* {}
+		
+		#about-us-img {
+			display: block;
+			width: 100%;
+		}
+		
+		#about-us-info-container {
+			
+			background: $deepBlue;
+			width: 100%;
+		}
+		
+		#about-us-info-text {
+			padding: 0 10%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			
+			font-size: 18px;
+			font-family: Arial;
+			font-weight: 300;
+			letter-spacing: 1px;
+			
+			margin: 0 auto;
+			color: white;
+			
+		}
+		
+		#dot-net-logo {
+			
+			width: 60px;
+			padding-left: 10%;
+			padding-bottom: 10px;
+		}
+		
+		.read-more-link {
+			font-size: 20px;
+		}
+	}
+// END ABOUT-US
+	
+	#contact-us {
+		
+		background: $lightBlue;
+		
+		h1 {
+			
+			margin: 0;
+			padding-top: 20%;
+			padding-bottom: 30px;
+			color: white;
+		}
+		
+		#skyline-img{
+			display: none;
+		}
+		
+		
+		#form-container {
+			margin: 0 10%;
+		}
+		
+		.form-group {
+			width: 80%;
+			text-align: right;
+			margin: 0 5%;
+			margin-bottom: 10px;
+			
+			input, textarea{
+				width: 100%;
+				height: 20px;
+				font-family: Arial;
+				font-weight: 500;
+				font-size: 16px;
+				letter-spacing: 1px;
+				border-radius: 6px;
+				padding: 6px 9px;
+			}
+			
+			textarea {
+				min-height: 120px; 
+			}
+			
+			button {
+//				display: none;
+//				position: relative;
+//				right: -20px;
+//				float: right;
+				margin-bottom: 30px;
+			}
+			
+		}
+		
+		
+		
+	}
+	
+} 
+//END OF SECTION CONTAINER
+
+
+footer{
+	background: $darkGray;
+	width: 100%;
+}
+
+.footer-col-container {
+	
+	min-height: 200px;
+	
+	color: white;
+	width: 10%;
+	margin: 0 2.5%;
+	
+	display: grid;
+	grid-template-columns: repeat(3 1fr);
+	column-width: 100px;
+	grid-gap: 15px;
+
+	one 	{grid-area: col1}
+	two 	{grid-area: col2}
+	three 	{grid-area: col3}
+	
+	grid-template-areas: 
+		"col1 col2 col3";
+	
+	* {
+		padding: 0;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.footer-columns {
+		margin-top: 20px;
+		
+		.uline{
+			border-bottom: 2px solid white;
+		}
+		
+		#uline-vaare-produkter{
+			width: 80%;
+			margin: 0 10%;
+		}
+		#uline-om-oss{
+			width: 50%;
+			margin: 0 25%;
+		}
+	}
+	
+	h3 {
+		text-align: center;
+		display: inline-block;
+		font-size: 15px;
+		white-space: nowrap;
+	}
+	
+	
+	ul li{
+		display: inline;
+		text-align: center;
+		font-size: 12px;
+		font-weight: bold;
+		
+		list-style: none;
+		width: 100px;
+		letter-spacing: 0.95px;
+		white-space: nowrap;
+		
+	}
+	a{	
+		display: block;
+		padding-bottom: 8px;
+//		color: red!important;
+
+	}
+	
+	img {
+		margin-top: 15px;
+		width: 110px;;
+	}
+	
+}
+
+
+//MEDIA QUERRY STUFF
+
+
+@media only screen and (min-width: 520px) {
+	
+}
+
+
+
+@media only screen and (min-width: 520px) {
+    
+.mobile-nav {
+	max-height: 60%!important;
+	
+	img{
+		width: 60% !important;
+	}
+}
+//EMD MEIDA QUERIE min-width: 520px	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//START MEDIA QUERYS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 639px) {
+}
+
+
+@media only screen and (min-width: 640px) {
+	
+	
+//FIXING ASIDE-BAR
+	
+	body #container {
+		grid-template-areas: 
+			" head "
+			" side "
+			" cont "
+			" foot "!important;
+		
+		aside {
+			position: relative;
+			right: 0!important;
+			width: 100%;
+			overflow: hidden;
+			height: 7px;
+			box-shadow: none;
+		}
+		
+		aside.active {
+			height: 100px;
+		}
+		
+		#topbar-hamburger-menu {
+			transition: 0.3s;
+		}
+		
+		#topbar-hamburger-menu.open{
+			transform: rotate(-90deg);
+			padding-left: 10px;
+			margin: 0;
+		}
+		
+		#exit-side-menu-btn {display: none;}
+		#our-products-title {display: none;}
+//		#about-us-title 	{display: none;}
+		
+		#sidebar-container {
+			
+			display: grid;
+			margin: 0 30%;
+			
+			
+			#our-products-list 	{grid-area: upro}
+			#about-us-list 		{grid-area: abot}
+			#about-us-title		{grid-area: tsep}
+			
+			grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+			grid-template-areas: 
+			" . . abot tsep upro . . "!important;
+		}
+		
+		#about-us-title	{
+			width: 2px;
+			height: 50%;
+			align-self: center;
+			justify-self: center;
+			background: rgba(255, 255, 255, 0.5);
+			color: rgba(0,0,0,0);
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		
+		.side-menu-items {
+			float: right;
+			background: none;
+			margin: 20px;
+			position: relative;
+			top: -10px;
+			
+			
+			li{
+				border: 0!important;
+				background: none!important;
+				padding: 0;
+				margin: 0;
+				text-align: center;
+//				display: block;
+				margin-bottom: 7px;
+				
+				a{
+					color: white!important;
+					font-size: 14px;
+				}
+				
+				
+				#{$a-tags-hover} {
+					color: $lightBlue !important; 
+				}
+				
+			}
+		}
+	}
+	
+	
+	
+//FIXING TOP-BAR
+	header{
+		max-width: 960px;
+		width: 100%;
+	}
+	
+	#first-topbar .mobile-nav {grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr!important; }
+	
+	#second-topbar		{display: none;}
+	.topbar-seperators 	{display: none!important;}
+	
+	
+	#first-topbar .mobile-nav{
+	
+		background: white !important;
+		position: relative;
+		padding: 0!important;
+
+		
+		#topbar-logo {
+			display: list-item!important;
+			min-width: 85px;
+			align-self: start;
+		}
+		
+		#topbar-support {
+			display: list-item!important;
+			align-self: center;
+		}
+		
+		#topbar-hamburger-menu {
+			display: list-item!important;
+			align-self: center;
+			padding-right: 15%
+		}
+		
+		
+		grid-template-columns: repeat(8 1fr)!important;
+		grid-template-areas:  
+			"logo . home abut ourp tsup thmb" !important;
+		
+		
+		
+		li{
+			align-self: center;
+		}
+		
+		#{$a-tags} {
+			color: $darkGray!important;
+			text-decoration: none;
+		}
+		#{$a-tags-hover} {
+			color: $lightBlue !important; 
+
+		}
+		
+	}
+	
+	//DONE WITH ASIDE BARE FIXED
+	
+	
+	#about-us {
+		
+		h1{
+			padding-top: 150px!important;
+			padding-bottom: 20px!important; 
+		}
+	}
+	
+	
+	#form-container {
+	
+		max-width: 450px;
+		margin: 0!important;
+		margin-left: 50%!important; 
+		
+		
+		
+	}
+	
+	
+	.mySlides {
+		min-height: 332px;
+		
+		img{
+			width: 70%!important;
+			margin: auto 15%;
+		}
+	}
+	
+	
+}
